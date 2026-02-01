@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Meu Amor 💖</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 40px 15px;
+      overflow-x: hidden;
+    }
+
+    /* 🌸 Fundo mais suave */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url('./fundo.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.35; /* MAIS HARMÔNICO */
+      z-index: -1;
+    }
+
+    /* 🪄 Card principal */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 35px 25px;
+      background: rgba(0, 0, 0, 0.55); /* menos pesado */
+      border-radius: 26px;
+      box-shadow: 0 0 35px rgba(0,0,0,0.75);
+      backdrop-filter: blur(7px);
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: #ffe6f0;
+    }
+
+    /* 📸 Foto */
+    .foto img {
+      width: 70%;
+      max-width: 240px;
+      border-radius: 20px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.6);
+      margin: 30px auto;
+      display: block;
+      opacity: 0.9;
+    }
+
+    /* 💌 Botão */
+    .botao-container {
+      margin: 35px 0;
+    }
+
+    button {
+      background: linear-gradient(45deg, #ff7abf, #ff3d6e);
+      color: #fff;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1.15em;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,122,191,0.6);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(255,122,191,0.85);
+    }
+
+    /* ✨ Mensagem */
+    #mensagemSecreta {
+      display: none;
+      margin-top: 25px;
+      padding: 18px;
+      font-size: 1.25em;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.14);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* 💍 Pedido (escondido) */
+    .pedido {
+      display: none;
+      margin-top: 40px;
+      padding: 30px;
+      border-radius: 24px;
+      background: linear-gradient(
+        145deg,
+        rgba(255,122,191,0.20),
+        rgba(255,255,255,0.06)
+      );
+      box-shadow: 0 0 25px rgba(0,0,0,0.55);
+      animation: fadeIn 1.3s ease forwards;
+    }
+
+    .pedido h2 {
+      font-size: 1.9em;
+      margin-bottom: 10px;
+    }
+
+    .pedido p {
+      font-size: 1.15em;
+      margin-bottom: 18px;
+      color: #ffeaf2;
+    }
+
+    .pedido video {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 18px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.6);
+    }
+
+    /* 📱 Responsivo */
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      p { font-size: 1.1em; }
+      button { font-size: 1.05em; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Para o meu amor Julia 💖</h1>
+    <p>06 de Agosto 🌸</p>
+
+    <!-- 📸 Foto -->
+    <div class="foto">
+      <img src="./0608.jpeg" alt="Nossa foto juntos">
+    </div>
+
+    <!-- 💌 Botão -->
+    <div class="botao-container">
+      <button onclick="revelarTudo()">Clique aqui, meu amor</button>
+    </div>
+
+    <!-- ✨ Mensagem -->
+    <div id="mensagemSecreta">
+      🌟 Estar com você deixa tudo mais bonito.<br>
+      Eu te amo hoje, amanhã e sempre. ❤️
+    </div>
+
+    <!-- 💍 Pedido -->
+    <div class="pedido" id="pedido">
+      <h2>Nosso pedido!💍</h2>
+      <p>18/01/2026🤍</p>
+
+      <video controls>
+        <source src="./pedido.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+      </video>
+    </div>
+  </div>
+
+  <!-- 🎶 Música da internet -->
+  <audio id="musica" loop>
+    <source src="https://SEU-LINK-DIRETO-AQUI.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function revelarTudo() {
+      document.getElementById("mensagemSecreta").style.display = "block";
+      document.getElementById("pedido").style.display = "block";
+
+      const musica = document.getElementById("musica");
+      musica.volume = 0.4; // suave e romântico
+      musica.play();
+    }
+  </script>
+
+</body>
+</html>
